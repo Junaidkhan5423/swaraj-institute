@@ -1,13 +1,604 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: aparaj;
+  src: url(./fonts/aparaj.ttf);
+}
+
+.header_main {
+  width: 100%;
+  height: 250px;
+  background: #f0f8ff;
+}
+
+.head1 {
+  width: 100%;
+  height: 125px;
+}
+
+.head2 {
+  width: 100%;
+  height: 125px;
+}
+
+.head3 {
+  width: 85%;
+  background: #163169;
+  margin: auto;
+  height: 115px;
+  border: 3px solid rgb(255, 255, 81);
+}
+
+.logohead1 {
+  width: 223px;
+  height: 194px;
+  position: absolute;
+  margin-top: -4%;
+  margin-left: 1%;
+}
+
+.logohead2 {
+  width: 199px;
+  height: 193px;
+  position: absolute;
+  margin-top: -177px;
+  margin-left: 87%;
+}
+
+.head3 h1 {
+  font-family: aparaj;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 5px;
+}
+
+.head3 h2 {
+  font-family: aparaj;
+  color: rgb(239, 246, 47);
+  text-align: center;
+  font-size: 40px;
+  margin-top: -4px;
+}
+
+.head1 p {
+  color: black;
+  text-align: center;
+  font-family: aparaj;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.head1 h3 {
+  position: absolute;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 17px 27px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #001f5f;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #001f5f;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky+.content {
+  padding-top: 60px;
+}
+
+.bi-house-door {
+  font-size: 15px;
+  position: absolute;
+  margin-left: -22px;
+}
+
+.content {
+  height: 1500px
+}
+
+.fl {
+  float: left;
+  font-size: 14px;
+}
+
+.marq {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  color: white;
+}
+
+marquee a {
+  margin-left: 3%;
+  text-decoration: none;
+  color: white;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlidess {
+  display: none;
+}
+
+.mySlides img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 2%;
+}
+/* Fading animation */
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
+/*---------footer-------------*/
+
+footer {
+  width: 100%;
+  height: 631px;
+  background: #163169;
+}
+
+.social {
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  background: #001f5f;
+  display: flex;
+}
+
+.cr {
+  margin-left: 5%;
+  margin-top: 1%;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+.socio-links {
+  width: 30%;
+  height: 80px;
+  margin-left: 22%;
+  margin-top: 1%;
+}
+
+.socio-links .bi {
+  margin-left: 3%;
+  font-size: 30px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fb:hover {
+  color: #4267B2;
+}
+
+.ig:hover {
+  color: #E1306C;
+}
+
+.tr:hover {
+  color: #00acee;
+}
+
+.yt:hover {
+  color: #FF0000;
+}
+
+.logo_corner {
+  width: 30%;
+  height: 541px;
+  position: relative;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.info_main {
+  width: 52%;
+  height: 541px;
+  position: relative;
+  margin-top: 2%;
+}
+
+.main,
+.info_main {
+  display: flex;
+}
+
+.logo {
+  width: 100%;
+  /**/
+  height: 300px;
+  position: relative;
+  margin-top: 1%;
+}
+
+.paymodes {
+  width: 100%;
+  height: 225px;
+  position: relative;
+  margin-top: 1%;
+}
+
+.paymodes h2 {
+  color: whitesmoke;
+  background: red;
+  width: 44%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 35px;
+  font-size: 20px;
+  clip-path: polygon(0 0, 87% 0, 99% 100%, 0% 100%);
+}
+
+.quick {
+  width: 30%;
+  height: 400px;
+  position: relative;
+  margin-top: 1%;
+}
+
+.policy {
+  width: 30%;
+  height: 200px;
+  position: relative;
+  margin-top: 1%;
+}
+
+.info {
+  width: 40%;
+  height: 485px;
+  position: relative;
+  margin-top: 1%;
+}
+
+.logo img {
+  height: 151px;
+  margin-left: 26%;
+}
+
+.logo p {
+  color: white;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 10%;
+}
+
+.payicon {
+  display: flex;
+}
+
+.payicon a {
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+.payicon img {
+  margin-left: 2%;
+  margin-top: 5%;
+}
+
+.quick h2 {
+  color: whitesmoke;
+  background: red;
+  width: 70%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 35px;
+  font-size: 20px;
+  clip-path: polygon(0 0, 87% 0, 99% 100%, 0% 100%);
+}
+
+.quick a,
+.policy a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 9px;
+  font-size: 20px;
+  border-bottom: 2px solid gray;
+}
+
+.policy h2 {
+  color: whitesmoke;
+  background: red;
+  width: 50%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 35px;
+  font-size: 20px;
+  clip-path: polygon(0 0, 87% 0, 99% 100%, 0% 100%);
+}
+
+.info h2 {
+  color: whitesmoke;
+  background: red;
+  width: 30%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 35px;
+  font-size: 20px;
+  clip-path: polygon(0 0, 87% 0, 99% 100%, 0% 100%);
+}
+
+.info a {
+  text-decoration: none;
+  color: #a6a6a6;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 9px;
+  font-size: 20px;
+}
+
+.quick,
+.policy,
+.info {
+  margin-left: 3%;
+}
+/*  about us */
+
+.about {
+  width: 80%;
+  height: 2300px;
+  background: #f0f8ff;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.about h1 {
+  font-size: 40px;
+  color: #163169;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  margin-left: 2%;
+}
+
+.about p {
+  margin-left: 2%;
+  color: #484848;
+  font-size: 25px;
+  margin-top: 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* homepage content*/
+
+.content_main {
+  width: 80%;
+  margin: auto;
+  height: auto;
+  margin-top: 1%;
+  display: flex;
+}
+
+.content_main .one,
+.two {
+  width: 20%;
+  height: 600px;
+}
+
+.swarajya {
+  width: 54%;
+  height: 562px;
+  background: #f0f8ff;
+  margin: auto;
+  margin-top: 0;
+}
+
+.one .menu,
+.navigation,
+.institution {
+  width: 100%;
+  height: 259px;
+  background: #f0f8ff;
+}
+
+.institution {
+  margin-top: 15%;
+}
+
+.swarajya h2,
+.menu h2,
+.studentsec h2,
+.navigation h2,
+.institution h2,
+.nb h2,
+.course_slider h2 {
+  background: #001f5f;
+  color: whitesmoke;
+  text-align: center;
+  height: 48px;
+  font-family: system-ui;
+  font-weight: 700;
+}
+
+.swarajya p {
+  margin-left: 2%;
+  color: #484848;
+  font-size: 20px;
+  margin-top: 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu a,
+.studentsec a,
+.institution a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 9px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.two {
+  background: #f0f8ff;
+  height: 574px;
+}
+
+.studentsec a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 1px solid #a6a6a6;
+}
+/* notice board*/
+
+.noticeboard {
+  width: 80%;
+  margin: auto;
+  height: 290px;
+  display: flex;
+}
+
+.nb {
+  width: 50%;
+  height: 290px;
+  background: #4267B2;
+}
+
+.mrq2 a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  overflow: hidden;
+}
+
+.course_slider {
+  width: 45%;
+  margin-left: 5%;
+  height: 290px;
+  background: #f0f8ff;
+}
+/*mission and vision*/
+
+.mv {
+  width: 90%;
+  height: auto;
+  display: flex;
+}
+
+.mission,
+.vision {
+  margin-top: 2%;
+  width: 45%;
+  height: 650px;
+  background: #f0f8ff;
+  margin-left: 5%;
+}
+
+.mission h1,
+.vision h1,
+.aim h1 {
+  font-size: 40px;
+  color: #163169;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.mission p,
+.vision p,
+.aim p {
+  margin-left: 2%;
+  color: #484848;
+  font-size: 22px;
+  margin-top: 2%;
+  margin-right: 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.aim {
+  width: 90%;
+  background: #f0f8ff;
+  margin: auto;
+  height: 607px;
 }
